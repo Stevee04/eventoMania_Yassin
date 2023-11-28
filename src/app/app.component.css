@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gradient-background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to right, #ff8a00, #e52e71); /* Puedes ajustar los colores aquí */
+  animation: gradientAnimation 10s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.card-container {
+  position: relative;
+  z-index: 1;
+}
+
+label {
+  font-size: 18px;
+  color: rgb(255, 255, 255); /* Green color */
+}
+
+select {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #ffffff; /* Pink color */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #009688; /* Teal color */
+  background-color: #FFEB3B; /* Yellow color */
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Add hover effect on cards */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Style for event titles */
+h1, h2, h3 {
+  color: #2196F3; /* Blue color */
+}
+
+/* Style for the "Sin eventos por mostrar" message */
+h3 {
+  color: #FF5722; /* Deep Orange color */
+}
+
+/* Style for the free event message */
+h2:contains('Gratis') {
+  color: #4CAF50; /* Green color */
+}
+
+/* Style for the date and time */
+h3:contains('-') {
+  color: #673AB7; /* Deep Purple color */
+}
+
+/* Style for the currency */
+h2:contains('$') {
+  color: #FFC107; /* Amber color */
+}
